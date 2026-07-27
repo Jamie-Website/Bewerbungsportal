@@ -1,0 +1,652 @@
+/* =======================================
+   Google Font
+======================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* =======================================
+   RESET
+======================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =======================================
+   FARBEN
+======================================= */
+
+:root{
+
+    --background:#0D1117;
+    --surface:#161B22;
+    --primary:#2388FF;
+    --primary-hover:#409CFF;
+
+    --text:#F5F5F5;
+    --text-light:#A7B0BC;
+
+    --border:#30363D;
+
+}
+
+/* =======================================
+   BODY
+======================================= */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:linear-gradient(
+        135deg,
+        #0D1117,
+        #111827,
+        #0D1117
+    );
+
+    color:var(--text);
+
+    font-family:"Inter",sans-serif;
+
+    line-height:1.7;
+
+}
+
+/* =======================================
+   LINKS
+======================================= */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/* =======================================
+   BILDER
+======================================= */
+
+img{
+
+    max-width:100%;
+
+}
+
+/* =======================================
+   SECTION
+======================================= */
+
+section{
+
+    padding:120px 8%;
+
+}
+
+/* =======================================
+   ÜBERSCHRIFTEN
+======================================= */
+
+h1{
+
+    font-size:4rem;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+h2{
+
+    font-size:2.6rem;
+
+    font-weight:700;
+
+    margin-bottom:45px;
+
+    letter-spacing:-1px;
+
+}
+
+p{
+
+    color:var(--text-light);
+
+    font-size:1.1rem;
+
+    max-width:700px;
+
+}
+/* =======================================
+   HEADER
+======================================= */
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:20px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(13,17,23,.75);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:1000;
+
+}
+
+/* =======================================
+   LOGO
+======================================= */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo-circle{
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    font-weight:700;
+
+    font-size:18px;
+
+    box-shadow:0 0 25px rgba(35,136,255,.35);
+
+}
+
+.logo-text{
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+}
+
+/* =======================================
+   NAVIGATION
+======================================= */
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    color:var(--text-light);
+
+    font-weight:500;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+nav a.active{
+
+    color:var(--primary);
+
+}
+
+nav a:hover{
+
+    color:white;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* =======================================
+   RESPONSIVE
+======================================= */
+
+@media(max-width:900px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+}
+/* =======================================
+   HERO
+======================================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding-top:80px;
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.hero h2{
+
+    margin-top:30px;
+
+    margin-bottom:40px;
+
+    line-height:1.3;
+
+}
+
+.hero p{
+
+    margin-bottom:50px;
+
+}
+
+/* =======================================
+   BUTTONS
+======================================= */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    padding:16px 34px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(35,136,255,.30);
+
+}
+
+.button:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-4px);
+
+}
+
+.secondary{
+
+    background:transparent;
+
+    border:1px solid var(--border);
+
+}
+
+.secondary:hover{
+
+    border-color:var(--primary);
+
+    background:rgba(35,136,255,.08);
+
+}
+/* =======================================
+   DOKUMENTENKARTEN
+======================================= */
+
+.card-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.card{
+
+    background:linear-gradient(
+        180deg,
+        rgba(30,35,45,.95),
+        rgba(22,27,34,.95)
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+min-height: 340px;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+    border-color:var(--primary);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35),
+        0 0 25px rgba(53,136,255,.25);
+
+}
+
+.icon{
+
+    font-size:58px;
+
+    margin-bottom:28px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.card h3{
+
+    font-size:1.55rem;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+    color:var(--text);
+
+}
+
+.card p{
+
+    margin-bottom:25px;
+
+}
+
+.card a{
+
+    display:block;
+    width:100%;
+text-align:center;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:13px 24px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:all .3s ease;
+
+    box-shadow:0 8px 18px rgba(35,136,255,.25);
+
+margin-top:auto;
+
+}
+
+.card a:hover{
+
+    background:var(--primary-hover);
+
+}
+/* =======================================
+   PRAKTIKA & PROJEKTE
+======================================= */
+
+.card h4{
+
+    color:#7FB3FF;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+    margin-bottom:30px;
+
+}
+.card{
+
+    text-align:center;
+
+}
+.company-name{
+
+    color:var(--primary);
+
+    font-size:1.05rem;
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+    letter-spacing:.5px;
+
+}
+#contact{
+
+    padding:120px 8%;
+
+    display:block;
+
+    text-align:left;
+
+}
+
+.contact-card{
+
+    max-width:600px;
+
+    margin:40px auto;
+
+    background:linear-gradient(
+        180deg,
+        rgba(30,35,45,.95),
+        rgba(22,27,34,.95)
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.contact-info{
+
+    max-width:400px;
+
+    margin-top:35px;
+
+}
+
+.contact-info p{
+
+    margin-bottom:16px;
+
+    font-size:1.05rem;
+
+    color:var(--text-light);
+
+}
+
+.contact-info strong{
+
+    color:var(--text);
+
+}
+
+footer{
+
+    text-align:center;
+
+    padding:35px;
+
+    color:var(--text-light);
+
+    border-top:1px solid var(--border);
+
+    margin-top:80px;
+
+}
+/* =========================
+   Handy-Optimierung
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+
+        flex-direction: column;
+        gap: 18px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 2.3rem;
+
+    }
+
+    .hero p {
+
+        font-size: 1rem;
+
+    }
+
+    .card-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contact-info {
+
+        max-width: 100%;
+
+    }
+
+    section {
+
+        padding: 80px 6%;
+
+    }
+
+}
